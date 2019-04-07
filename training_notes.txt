@@ -1,0 +1,35 @@
+* Changed LeNet Architecture to take RGB image with 3 channels, no further preprocessing
+EPOCHS: 10
+BATCH_SIZE: 128
+Learing Rate: 0.001
+
+Training_01.p
+Final validation accuracy: 85.9%
+
+
+* preprocessed image to be grayscale, changes architecture back to take 1 channel
+EPOCHS: 10
+BATCH_SIZE: 128
+Learing Rate: 0.001
+
+Training_02.p
+Final validation accuracy: 88.0%
+
+
+* preprocessed image same as before, but this time normalized to -1...1
+EPOCHS: 10
+BATCH_SIZE: 128
+Learing Rate: 0.001
+
+Training_03.p
+Final validation accuracy: ???
+
+* increased EPOCHS
+EPOCHS: 150
+BATCH_SIZE: 128
+Learing Rate: 0.001
+
+Training_04.p
+Final validation accuracy: 92.3%
+
+
