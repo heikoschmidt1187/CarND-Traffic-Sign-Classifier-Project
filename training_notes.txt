@@ -32,7 +32,7 @@ Learing Rate: 0.001
 Training_04.p
 Final validation accuracy: 92.3%
 
-* added dropout after first relu to prevent overfitting
+* added dropout after first fully connected layer to avoid overfitting
 EPOCHS: 150
 BATCH_SIZE: 128
 Learing Rate: 0.001
@@ -40,3 +40,30 @@ keep_prob = 0.5
 
 Training_05.p
 Final validation accuracy: 95.6%
+
+* added dropout after second fully connectd layer to improve overfitting avoidance
+EPOCHS: 150
+BATCH_SIZE: 128
+Learing Rate: 0.001
+keep_prob = 0.5
+
+Training_06.p
+Final validation accuracy: 96.9%
+
+* added dropout after third fully connectd layer to improve overfitting avoidance
+EPOCHS: 150
+BATCH_SIZE: 128
+Learing Rate: 0.001
+keep_prob = 0.5
+
+Training_07.p
+Final validation accuracy: 96.7%
+
+* more dropouts improved, but still not mutch better --> decreased learning rate
+EPOCHS: 150
+BATCH_SIZE: 128
+Learing Rate: 0.0005
+keep_prob = 0.5
+
+Training_08.p
+Final validation accuracy: 
