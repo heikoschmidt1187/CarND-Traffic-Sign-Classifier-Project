@@ -32,4 +32,11 @@ Learing Rate: 0.001
 Training_04.p
 Final validation accuracy: 92.3%
 
+* added dropout after first relu to prevent overfitting
+EPOCHS: 150
+BATCH_SIZE: 128
+Learing Rate: 0.001
+keep_prob = 0.5
 
+Training_05.p
+Final validation accuracy: 95.6%
