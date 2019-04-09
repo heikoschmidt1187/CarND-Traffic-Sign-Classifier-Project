@@ -279,25 +279,35 @@ I chose five images for German traffic signs from Google image search:
 
 ![Web images][web]
 
-The images are clearly visible, while there may be the following dificulties:
+***Updated after 1st Review***
 
-* Image one has a blue/gray background
-* Image two as a part of an additional sign at the bottom and - from the image source - some watermark artifacts above it
-* Image three is not aligned towards the camera, has an additional sign and is rotated
-* Image four is one traffic sign in front of another, with an additional part of a sign at the top
-* Image five is clearly visible, but the sign is not facing towars the camera.
+**Image 1** is the Right-of-Way traffic sign. It's clearly visible and it's shape stands out, so the network should be easily able to detect the triangle class images. While in grayscale it has a gray border and the error in the middle is black, the LeNet should have enough information to classify it correctly. The background is blue-grayish which should not be a problem.
+
+**Image 2** is the No Vehcles traffic sign. The round shape should be easily recognised and narrow down the classes of images much as it stands out. As there is a big light circle in the middle, this should be one feature to be easily detected. A problem may be the dark part at the bottom and the light diagonal watermark at the image.
+
+**Image 3** is the Speed Limit 30 km/h traffic sign. While it's round shape and the dark numbers are good features to detect, the problem here is that the image is not aligned towards the camera, that it's rotated to the left (which may influence the number detection for the correct speed) and that there is a part of a blue traffic sign at the bottom. Still, the red border of the circle should be good to detect.
+
+**Image 4** is the Priority road sign. Its shape is outstanding as it has four corners, pointing up/down/left/right. This Should be one good feature to detect for classification. As in the sign set it's the only one with this shape, it should be detected with a high confidence. Also the white border and (in grayscale) the darker rectangle in the middle of the sign is a good quality to be detected. A problem with the image might be the other round traffic sign in the back, but as the Priority sign shape is so outstanding, I don't think there will be much problem.
+
+**Image 5** is the Yield sign. It also stands out due to its shape of a downward pointing triangle. The big while triangular plane and the red triangular border are easily to detect qualities, too.
+
+All the images are quite clear to see, without too much disturbing objects around them. The detection should be good with a well trained network.
 
 And...as I live in Germany and did records some videos with my dashcam for other car projects, I took five additional images from there:
 
 ![Own images][own]
 
-The images are not that clearly visible and partly of poor quality - as it's reality with cheaper cameras in cars:
+***Updated after 1st Review***
 
-* Image one is very dark and blurred
-* Image two is very bright but with low contrast, something covering the image (windshield reflection) and another sign at the top
-* Image three is very bringt, low contrast, very blurred.
-* Image four is very dark with low contrast and an additional - in the set not known - sign telling the times when the sign needs to be followed. The speed sign is badly visible.
-* Image five is quite clear to see, but blurred and with a troubled background.
+**Image 1** is the Priority traffic sign. In general, the qualities are the same like the web image 4. But this time, the image is much darker with lower contrast, so the shape doesn't stand out that much. It's very blurry, too, so the overall shapes are not that clear. Still I think the net will do a good job here.
+
+**Image 2** is the No Passign traffic sign. The colors are bright, but with low contrast, which will make it difficult to analyze in grayscale. The round shape should be good to narrow the possible classes down, but still the two car sign in the middle (one red, one black) will not be easy to see and to use for classification. Additionally, there is the lower part of another round image at the top of the image. Another problem may be the reflection on the windshield, resulting in a white part which distrubes the red borer of the round traffic sign. This potentially will influence the detection quality of the traffic sign shape.
+
+**Image 3** is the Speed Limit 80 km/h. Like with image 3, the colors and the contrast are bad, but the shape and the number are good qualities to detect for classification. Here is the upper part of another sign in the lower half of the image, so this may be a problem on detection.
+
+**Image 4** is the Speed Limit 50 km/h. The colors are very dark and the contrast is again not good. The round shape and the red circle of the image are not clearly visible, so the network may have problems finding it, especially in grayscale. While the number is relatively good readable and as a quality for classification good to detect, there is an additional rectangular sign below the traffic sign. As this wasn't part of the training set and the network doesn't know this kind of sign, there may be great problems in classifying the main sign as well. Still, it shouldn't matter too much.
+
+**Image 5** is the Pedestrians image. The triangular shape looking upwards should be a great quality to detect and narrow down the number of possible classes a lot. Due to the relatively good image quality it should be able to detect the contours well for the LeNet. The human depicted in the white area is another quality that the network can use to classify. But the shape of that part, especially with low resolution, is similar to the Right-Of-Way sign, so the network may have problems with getting this correctly. 
 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
